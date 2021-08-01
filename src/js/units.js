@@ -1,10 +1,10 @@
-class Character {
+export class Character {
   constructor(name, type) {
     if (name.length < 2 || name.length > 10) {
       throw new Error('Некорректная длина имени');
     }
 
-    const typesOfUnits = ['bowerman', 'swordsman', 'magician', 'daemon', 'undead', 'zombie'];
+    const typesOfUnits = ['bowerman', 'swordsman', 'magician', 'deamon', 'undead', 'zombie'];
     if (!typesOfUnits.includes(type.toLowerCase())) {
       throw new Error('Некорректный тип юнита');
     }
