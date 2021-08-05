@@ -116,17 +116,13 @@ test('Zombie', () => {
 });
 
 test('lengthOfName', () => {
-  function result() {
-    new Bowerman('E', 'bowerman');
-  }
-  const expectation = new Error('Некорректная длина имени');
-  expect(result).toThrowError(expectation);
+  expect(() => new Bowerman('E', 'bowerman')).toThrowError(
+    'Некорректная длина имени',
+  );
 });
 
 test('typeOfUnit', () => {
-  function result() {
-    new Bowerman('Edgar', 'archer');
-  }
-  const expectation = new Error('Некорректный тип юнита');
-  expect(result).toThrowError(expectation);
+  expect(() => new Bowerman('Edgar', 'archer')).toThrowError(
+    'Некорректный тип юнита',
+  );
 });
